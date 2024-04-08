@@ -1,0 +1,160 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.item{
+    background-color: rgb(219, 218, 218);
+    color: black;
+    width: 300px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:20px auto ;
+}
+.two{
+    background-color: red;
+}
+
+.task2 p{
+    position: relative;
+    font-size: 20px;
+    margin: 10px auto;
+    width: 500px;
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgb(224, 224, 224);
+    color: black;
+    position: relative;
+    border-left: 4px solid rgb(235, 0, 118);
+    
+}
+.task2 p::before{
+    content: attr(data-person);
+    position: absolute;
+    left: -150px;
+    top: 0px;
+    background-color: rgb(194, 193, 193);
+    padding: 10px;
+    margin: 5px;
+    width: 70px;
+    font-size: 19px;
+
+}
+.task2 p::after{
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: -28px;
+    border-color:transparent rgb(235, 0, 118) transparent transparent;
+    border-width: 13px;
+    border-style: solid;
+}
+.task3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin:20px auto ;
+    counter-reset: plusone;
+}
+.task3 >div{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin-right: 15px;
+    /* box-shadow: -5px -5px  0 red , 5px 5px 0 blue; */
+    box-shadow: -3px -5px 0 0 rgb(235, 1, 118), 3px 5px 0px 0px rgb(0, 94, 255);
+    position: relative;
+  
+}
+.task3 >div::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    content: 'Element';
+    font-size: 18px;
+    font-weight: bold;
+ 
+}
+.task3 >div::after{    
+    counter-increment:plusone;
+    content:counter(plusone) ;
+    position: absolute;
+    top:-10px;
+    left: 38px;
+    border-radius: 50%;
+    background-color: black;
+    width: 22px;
+    height: 22px;
+    color: #fff;
+    text-align: center;
+}
+.task4{
+  width: 550px;  
+  margin:40px auto;
+  display: flex;
+  position: relative;
+}
+.task4::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    background-color: #03a9f4;
+    height: 380px;
+    width: 2px;
+
+}
+.task4::after{
+    content: 'or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #03a9f4;
+    color: white;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    border-radius: 50%;
+    transform: translate(-50% , -50%);
+
+}
+.basic{
+    background-color: #eaeaea;
+    width: 240px;
+    height: 340px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    /* margin-left: 60px; */
+
+}
+.left{
+    margin-right: 40px;
+} 
+.right{
+    margin-left: 40px;
+}
+.basic h2{
+    background-color:#03a9f4;
+    color: white;
+    padding:10px;
+    margin: 0;
+    border-radius: 10px;
+}
+.basic p{
+    width:180px ;
+    height:180px;
+    margin: 40px auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d6d6d6;
+    padding: 10px;
+    font-size: 34px;  
+    border-radius: 50%;
+
+}
